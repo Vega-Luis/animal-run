@@ -29,7 +29,7 @@
                 <!-- Camello -->
                 <Label text="Camello" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
                 <HBox spacing="10" GridPane.rowIndex="1" GridPane.columnIndex="1">
-                    <Slider fx:id="camelStep" min="1" max="20" value="10"/>
+                    <Slider fx:id="camelStep" min="1" max="100" value="10"/>
                     <Label fx:id="camelStepValue"/>
                 </HBox>
 
@@ -41,7 +41,7 @@
                 <!-- Avestruz -->
                 <Label text="Avestruz" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
                 <HBox spacing="10" GridPane.rowIndex="2" GridPane.columnIndex="1">
-                    <Slider fx:id="ostrichStep" min="1" max="20" value="10"/>
+                    <Slider fx:id="ostrichStep" min="1" max="100" value="10"/>
                     <Label fx:id="ostrichStepValue"/>
                 </HBox>
 
@@ -53,7 +53,7 @@
                 <!-- Venado -->
                 <Label text="Venado" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
                 <HBox spacing="10" GridPane.rowIndex="3" GridPane.columnIndex="1">
-                    <Slider fx:id="deerStep" min="1" max="20" value="10"/>
+                    <Slider fx:id="deerStep" min="1" max="100" value="10"/>
                     <Label fx:id="deerStepValue"/>
                 </HBox>
                 <HBox spacing="10" GridPane.rowIndex="3" GridPane.columnIndex="2">
