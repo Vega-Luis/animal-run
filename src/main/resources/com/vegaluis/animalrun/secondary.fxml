@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Button?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.shape.Line?>
+
+<BorderPane xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.vegaluis.animalrun.SecondaryController">
+    <top>
+        <VBox spacing="10" >
+                <padding>
+        <Insets top="15" right="15" bottom="15" left="15"/>
+    </padding>
+
+
+            <Label text="Configuración de la carrera" style="-fx-font-size:16"/>
+
+            <GridPane hgap="15" vgap="10">
+
+                <Label text="Animal" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+                <Label text="Paso" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+                <Label text="Cadencia" GridPane.rowIndex="0" GridPane.columnIndex="2"/>
+
+                <!-- Camello -->
+                <Label text="Camello" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+                <HBox spacing="10" GridPane.rowIndex="1" GridPane.columnIndex="1">
+                    <Slider fx:id="camelStep" min="1" max="20" value="10"/>
+                    <Label fx:id="camelStepValue"/>
+                </HBox>
+
+                <HBox spacing="10" GridPane.rowIndex="1" GridPane.columnIndex="2">
+                    <Slider fx:id="camelCadence" min="1" max="1000" value="50" />
+                    <Label fx:id="camelCadenceValue"/>
+                </HBox>
+
+                <!-- Avestruz -->
+                <Label text="Avestruz" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+                <HBox spacing="10" GridPane.rowIndex="2" GridPane.columnIndex="1">
+                    <Slider fx:id="ostrichStep" min="1" max="20" value="10"/>
+                    <Label fx:id="ostrichStepValue"/>
+                </HBox>
+
+                <HBox spacing="10" GridPane.rowIndex="2" GridPane.columnIndex="2">
+                    <Slider fx:id="ostrichCadence" min="1" max="1000" value="50"/>
+                    <Label fx:id="ostrichCadenceValue"/>
+                </HBox>
+
+                <!-- Venado -->
+                <Label text="Venado" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+                <HBox spacing="10" GridPane.rowIndex="3" GridPane.columnIndex="1">
+                    <Slider fx:id="deerStep" min="1" max="20" value="10"/>
+                    <Label fx:id="deerStepValue"/>
+                </HBox>
+                <HBox spacing="10" GridPane.rowIndex="3" GridPane.columnIndex="2">
+                    <Slider fx:id="deerCadence" min="1" max="1000" value="50"/>
+                    <Label fx:id="deerCadenceValue"/>
+                </HBox>
+            </GridPane>
+
+            <Button fx:id="startRaceButton" text="Iniciar carrera" onAction="#startRace"/>
+
+        </VBox>
+    </top>
+
+    <center>
+        <Pane fx:id="root"
+             style="-fx-background-color: #8B5A2B;
+             -fx-border-color: black;
+             -fx-border-width: 3;">
+            <Line startX="50" startY="100" endX="50" endY="400"
+              stroke="white"
+              strokeWidth="5"/>
+            <Line startX="50" startY="100" endX="974" endY="100" stroke="white"/>
+            <Line startX="50" startY="200" endX="974" endY="200" stroke="white"/>
+            <Line startX="50" startY="300" endX="974" endY="300" stroke="white"/>
+            <Line startX="50" startY="400" endX="974" endY="400" stroke="white"/>
+
+        <!-- meta -->
+        <Line startX="974" startY="100" endX="974" endY="400"
+              stroke="white"
+              strokeWidth="5"/>
+
+        </Pane>
+    </center>
+</BorderPane>
